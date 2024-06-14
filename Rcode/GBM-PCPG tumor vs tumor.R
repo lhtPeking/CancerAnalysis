@@ -10,14 +10,14 @@ library(ggthemes)
 rm(list=ls(all=TRUE))
 options(stringsAsFactors = F)
 
-setwd("/Users/xiaoqiluo/Desktop/生信实验大作业")
+# setwd("/Users/xiaoqiluo/Desktop/生信实验大作业")
 
 ##读取
-GBM <-read.csv('/Users/xiaoqiluo/Desktop/生信实验大作业/TCGA-GBM.htseq_counts.tsv', header = T, sep = "") 
+GBM <-read.csv('bioinfoHW/DataFiles/TCGA-GBM.htseq_counts.tsv', header = T, sep = "") 
 rownames(GBM) <- GBM[,1] 
 GBM <- GBM[,-1]
 
-PCPG <-read.csv('/Users/xiaoqiluo/Desktop/生信实验大作业/TCGA-PCPG.htseq_counts.tsv', header = T, sep = "") 
+PCPG <-read.csv('bioinfoHW/DataFiles/TCGA-PCPG.htseq_counts.tsv', header = T, sep = "") 
 rownames(PCPG) <- PCPG[,1] 
 PCPG <- PCPG[,-1]
 

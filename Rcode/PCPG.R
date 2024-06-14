@@ -14,7 +14,7 @@ BiocManager::install("EnhancedVolcano")
 BiocManager::install("DESeq2")
 library(DESeq2)
 
-cts <- read.csv("/Users/xiaoqiluo/Desktop/生信实验大作业/TCGA-PCPG.htseq_counts.tsv",sep="\t",row.names="Ensembl_ID", header = TRUE)
+cts <- read.csv("bioinfoHW/DataFiles/TCGA-PCPG.htseq_counts.tsv",sep="\t",row.names="Ensembl_ID", header = TRUE)
 cts <- 2^cts - 1
 cts <- round(cts)
 

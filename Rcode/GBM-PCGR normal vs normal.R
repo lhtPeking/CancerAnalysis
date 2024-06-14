@@ -4,8 +4,8 @@ library(ggplot2)
 library(ggthemes)
 
 # 读取两组癌症细胞表达矩阵数据
-expr_matrix1 <- read.table("/Users/xiaoqiluo/Desktop/生信实验大作业/TCGA-GBM.htseq_counts.tsv", header=TRUE,sep="")
-expr_matrix2 <- read.table("/Users/xiaoqiluo/Desktop/生信实验大作业/TCGA-PCPG.htseq_counts.tsv", header=TRUE,sep="")
+expr_matrix1 <- read.table("bioinfoHW/DataFiles/TCGA-GBM.htseq_counts.tsv", header=TRUE,sep="")
+expr_matrix2 <- read.table("bioinfoHW/DataFiles/TCGA-PCPG.htseq_counts.tsv", header=TRUE,sep="")
 
 # 筛选正常细胞
 normal_1 <- grepl("11A", colnames(expr_matrix1))

@@ -10,10 +10,10 @@ from tensorflow.keras.utils import to_categorical
 import matplotlib.pyplot as plt
 
 # 读取和预处理数据
-cts_gbm = pd.read_csv("./TCGA-GBM.htseq_counts.tsv", sep="\t", index_col="Ensembl_ID")
+cts_gbm = pd.read_csv("bioinfoHW/DataFiles/TCGA-GBM.htseq_counts.tsv", sep="\t", index_col="Ensembl_ID")
 cts_gbm = np.round(2**cts_gbm - 1)
 
-cts_pcpg = pd.read_csv("./TCGA-PCPG.htseq_counts.tsv", sep="\t", index_col="Ensembl_ID")
+cts_pcpg = pd.read_csv("bioinfoHW/DataFiles/TCGA-PCPG.htseq_counts.tsv", sep="\t", index_col="Ensembl_ID")
 cts_pcpg = np.round(2**cts_pcpg - 1)
 
 # 随机选取表达量不为0的基因作为识别标准

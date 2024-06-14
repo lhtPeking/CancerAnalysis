@@ -113,7 +113,7 @@ GBMvsPCPG_DEG$label <- ifelse((GBMvsPCPG_DEG$padj < 1.6e-60 & GBMvsPCPG_DEG$log2
 ggplot(GBMvsPCPG_DEG, aes(x = log2FoldChange, y = -log10(padj))) +
   geom_point(aes(color = group), size = 0.5) +  # 调整点的大小，size=1 表示点的大小较小
   scale_color_manual(values = c("#eb7979", "grey", "#4a86e8"), limits = c("Up", "Not sig", "Down")) +
-  theme_wsj(base_size = 20) + 
+  theme_bw(base_size = 20) + 
   ggtitle("GBMvsPCPG Volcano Plot") +
   theme(plot.title = element_text(size = 25, hjust = 0.5)) +
   coord_cartesian(xlim = c(-15, 15), ylim = c(0, 400)) +

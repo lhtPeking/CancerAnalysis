@@ -65,7 +65,6 @@ EnhancedVolcano(resOrdered,
                 legendLabSize = 12,
                 legendIconSize = 5,
                 drawConnectors = TRUE,
-                widthConnectors = 0.5) + 
-  theme_wsj()
+                widthConnectors = 0.5)
 
 ggsave("GBM_new.png", width = 10, height = 6, dpi = 300)

@@ -45,10 +45,9 @@ volcano12 <- data.frame('log2FC' = res12$log2FoldChange, '-log10Padj' = log10(re
 volcano12$Sig <- ifelse(volcano12$pvalue < 0.0001&abs(volcano12$log2FC)>=2,ifelse(volcano12$log2FC >2,'Up','Down'),'None')
 ggplot(volcano12, aes(x = log2FC, y = -X.log10Padj,colour = Sig)) +
   geom_point(alpha = 0.5) +
-  theme_wsj() +
   xlab("Log2 Fold Change") +
   ylab("-Log10 Adjusted P-value")
-ggsave("GBMvsPCPG normal_new.png",width = 10, height = 6, dpi = 300)
+ggsave("GBM-PCPG normal.png",width = 10, height = 6, dpi = 300)
 
 
 
